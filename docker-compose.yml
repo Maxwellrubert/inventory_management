@@ -16,7 +16,7 @@ services:
 
   web:
     image: ghcr.io/bennyhinn18/inventory-manager:latest
-    command: python app.py 0.0.0.0:5000
+    command: python app.py
     volumes:
       - .:/code
     ports:

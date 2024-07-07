@@ -2,11 +2,11 @@ name: Publish Docker Image to GitHub Container Registry
 
 on: 
   push:
-    branches: [main]
+    branches: [master]
     tags-ignore:
       - 'v*'
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   publish-docker-image:

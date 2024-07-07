@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Product{% endblock %}
+
+{% block content %}
+<h2>Edit Product</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}
+    </div>
+    <div>
+        {{ form.quantity.label }}<br>
+        {{ form.quantity() }}
+    </div>
+    <div>
+        {{ form.price.label }}<br>
+        {{ form.price() }}
+    </div>
+    <button type="submit">Update Product</button>
+</form>
+<a href="{{ url_for('index') }}">Back to Product List</a>
+{% endblock %}
